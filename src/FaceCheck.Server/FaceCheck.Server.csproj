@@ -33,8 +33,8 @@
 		<PackageReference Include="Serilog.AspNetCore" Version="8.0.3" />
     </ItemGroup>
     <ItemGroup>
-      <ProjectReference Include="..\..\Yj.ArcSoftSDK\Yj.ArcSoftSDK.3.0\Yj.ArcSoftSDK.csproj" />
-      <ProjectReference Include="..\..\Yj.ArcSoftSDK\Yj.ArcSoftSDK.4_0\Yj.ArcSoftSDK.4_0.csproj" />
+      <ProjectReference Include="..\..\Yj.ArcSoftSDK\src\Yj.ArcSoftSDK.3.0\Yj.ArcSoftSDK.csproj" />
+      <ProjectReference Include="..\..\Yj.ArcSoftSDK\src\Yj.ArcSoftSDK.4_0\Yj.ArcSoftSDK.4_0.csproj" />
     </ItemGroup>
 
 </Project>
