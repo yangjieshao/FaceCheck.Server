@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>disable</Nullable>
+        <ImplicitUsings>disable</ImplicitUsings>
+        <InvariantGlobalization>true</InvariantGlobalization>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+
+        <ApplicationIcon>logo.ico</ApplicationIcon>
+        <AssemblyVersion>$(Version)</AssemblyVersion>
+        <FileVersion>$(Revision)</FileVersion>
+        <Version>2024.11.14.1</Version>
+        <Platforms>AnyCPU</Platforms>
+        <NeutralLanguage>zh-Hans</NeutralLanguage>
+        <Authors>yangjieshao</Authors>
+        <Copyright>Copyright © $(Authors)</Copyright>
+        <NoWarn>1701;1702;CA2254;CA1041;CS0649;NU1803</NoWarn>
+
+        <!--<IlcGenerateMapFile>false</IlcGenerateMapFile>
+        <PublishAot>true</PublishAot>
+        <PublishTrimmed>true</PublishTrimmed>
+        <PublishReadyToRun>true</PublishReadyToRun>
+        <EnableTrimAnalyzer>true</EnableTrimAnalyzer>
+        <EnableSingleFileAnalyzer>true</EnableSingleFileAnalyzer>
+        <EnableAotAnalyzer>true</EnableAotAnalyzer>
+        <MaxCpuCount Condition="'$(MaxCpuCount)' == ''">0</MaxCpuCount>-->
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="System.Text.Encoding.CodePages" Version="8.0.0" />
+		<PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Microsoft.Extensions.Logging.Debug" Version="8.0.1" />
+		<PackageReference Include="Serilog.AspNetCore" Version="8.0.3" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\..\Yj.ArcSoftSDK\Yj.ArcSoftSDK.3.0\Yj.ArcSoftSDK.csproj" />
+      <ProjectReference Include="..\..\Yj.ArcSoftSDK\Yj.ArcSoftSDK.4_0\Yj.ArcSoftSDK.4_0.csproj" />
+    </ItemGroup>
+
+</Project>
